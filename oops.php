@@ -46,7 +46,7 @@ echo "<br>";
 echo "Color: " .  $apple->get_color();
 echo "<br>";
 echo "Quantity: " .  $apple->get_quantity();
-echo "<br>";
+echo "<br><br><br><br>";
 
 
 $orange = new Fruit();
@@ -58,6 +58,40 @@ echo "<br>";
 echo "Color: " .  $orange->get_color();
 echo "<br>";
 echo "Quantity: " .  $orange->get_quantity();
+
+
+
+
+class Cars extends Fruit{
+  public $company;
+  public $type;
+
+  function __construct($company, $type){
+    $this->company= $company;
+    $this->type= $type;
+
+  }
+  function get_car(){
+    return $this->company;
+  }
+  function get_type(){ 
+    return $this->type;
+  }
+}
+
+$car = new Cars("BMW" , "Sedan");
+echo $car->get_type();
+echo "<br/>";
+echo $car->get_car();
+echo "<br/>";
+$apple = new Fruit;
+$apple->set_name("Apple");
+
+echo "Fruit: " . $apple->get_name()." in " . $car->get_car();
+
+
+
+
 ?>
 
 
